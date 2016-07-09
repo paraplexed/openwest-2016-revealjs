@@ -46,7 +46,178 @@
 						<small>By <a href="https://github.com/paraplexed">Derek Clifford</a> / <a href="http://twitter.com/paraplexed">@paraplexed</a></small>
 					</p>
 				</section>
-
+                <section>
+                    <h2>Introduction</h2>
+                    <p>
+                        'Automating test automation'
+                        Who am i
+                        What this talk hopes to cover (ideas/concepts, no one falls asleep)
+                    </p>
+                </section>
+                <section>
+                    <h2>Test types</h2>
+                    <p>
+                        Has anyone gotten in a debate about a test type
+                        Example: what is 'regression testing'
+                        Wikipedia definition: 
+                            'Regression testing is a type of software testing that verifies that software previously developed and tested still performs correctly after it was changed or interfaced with other software. Changes may include software enhancements, patches, configuration changes, etc'
+                    </p>
+                </section>
+                <section>
+                    <h2>How google defines test types</h2>
+                    <p>
+                        Google book
+                        Small tests
+                        Medium tests
+                        Large tests
+                        Enormous tests
+                    </p>
+                </section>
+                <section>
+                    <h2>Defining your own test types</h2>
+                    <p>
+                        How Alianza defines test types
+                        Small tests
+                        Medium tests
+                        Large tests
+                        Enormous tests
+                    </p>
+                </section>
+                <section>
+                    <h2>Okay great, why do I care about test types?</h2>
+                    <p>
+                        testing pyramid
+                        testing pyramid with small/medium/large
+                        We can now define where and when we run small/medium/large tests
+                    <p>
+                </section>
+                <section>
+                    <h2>Benefits of defining your own test types</h2>
+                    <p>
+                        As a development team, you can decide how your pipeline works
+                        It's specific to your company, there are no pre-conceived notions
+                        Once types are defined, less arguments about what a test is or isn't (ie integration test vs functional test)
+                    </p>
+                </section>
+                <section>
+                    <h2>Test types in your CI/CD pipeline</h2>
+                    <p>
+                        Show a couple different examples of when you might run small/medium/large tests
+                        Show an example of when Alianza runs tests in a pipeline
+                    </p>
+                </section>
+                <section>
+                    <h2>CI/CD</h2>
+                    <p>
+                        What is continuous integration?
+                        What is continuous deployment/delivery?
+                    </p>
+                </section>
+                <section>
+                    <h2>What does CI/CD look like?</h2>
+                </section>
+                <section>
+                    <h2>Jenkins</h2>
+                    <section>
+                        <h3>CI</h3>
+                    </section>
+                    <section>
+                        <h3>CD</h3>
+                    </section>
+                    <section>
+                        <h3>Advantages</h3>
+                    </section>
+                </section>
+                <section>
+                    <h2>Snap-ci</h2>
+                    <section>
+                        <h3>CI</h3>
+                    </section>
+                    <section>
+                        <h3>CD</h3>
+                    </section>
+                    <section>
+                        <h3>Advantages</h3>
+                    </section>
+                </section>
+                <section>
+                    <h2>Wercker</h2>
+                    <section>
+                        <h3>CI</h3>
+                    </section>
+                    <section>
+                        <h3>CD</h3>
+                    </section>
+                    <section>
+                        <h3>Advantages</h3>
+                    </section>
+                </section>
+                <section>
+                    <h2>Travis-ci</h2>
+                    <section>
+                        <h3>CI</h3>
+                    </section>
+                    <section>
+                        <h3>CD</h3>
+                    </section>
+                    <section>
+                        <h3>Advantages</h3>
+                    </section>
+                </section>
+                <section>
+                    <h2>Running tests outside of a pipeline</h2>
+                    <p>
+                        Can't do a pipeline immediately? Or in process of transitioning
+                    </p>
+                </section>
+                <section>
+                    <h2>Running tests outside of a pipeline</h2>
+                    <section>
+                        <h3>Small tests</h3>
+                    </section>
+                    <section>
+                        <h3>Medium tests</h3>
+                    </section>
+                    <section>
+                        <h3>Large tests</h3>
+                    </section>
+                    <section>
+                        <h3>Enormous tests</h3>
+                    </section>
+                </section>
+                <section>
+                    <h2>Handling failures</h2>
+                    <section>
+                        <h3>Notifications</h3>
+                    </section>
+                    <section>
+                        <h3>Responsibility for looking at failing tests</h3>
+                    </section>
+                    <section>
+                        <h3>Integrating with other services</h3>
+                        <p>Jira, Db, DataDog/Graphite</p>
+                    </section>
+                </section>
+                <section>
+                    <h2>Automated testing in Docker</h2>
+                    <section>
+                        <h3>Benefits</h3>
+                        <p>
+                            Always clean environment
+                            Always reproducable failures
+                            Portable (nature of docker containers/images)
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Downsides</h3>
+                        <p>
+                            Environment may not be the same as prod (unless you are deploying docker containers to prod)
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Example</h3>
+                    </section>
+                </section>
 				<section>
 					<h2>References</h2>
 					<p>
@@ -56,6 +227,9 @@
                     </small>
 					</p>
 				</section>
+                <section>
+                    <h2>Thank you!</h2>
+                </section>
 
 			</div>
 
