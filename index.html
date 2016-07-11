@@ -48,40 +48,107 @@
 				</section>
                 <section>
                     <h2>Introduction</h2>
-                    <p>
-                        'Automating test automation'
-                        Who am i
-                        What this talk hopes to cover (ideas/concepts, no one falls asleep)
-                    </p>
+                    <ul>
+                        <li>SDET/Automation Engineer at Alianza (Voip SaaS)</li>
+                        <li>Second Openwest presentation</li>
+                        <li>4+ years doing test automation</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Goals for presentation</h2>
+                    <ul>
+                        <li>No one falls asleep</li>
+                        <li>Focus on ideas and concepts, not tools</li>
+                        <li>Share experience</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Test types</h2>
-                    <p>
-                        Has anyone gotten in a debate about a test type
-                        Example: what is 'regression testing'
+                    <ul>
+                        <li>Unit</li>
+                        <li>Integration</li>
+                        <li>Functional</li>
+                        <li>Regression</li>
+                        <li>System</li>
+                        <li>Load</li>
+                        <li>Performance</li>
+                        <li>Stress</li>
+                        <li>End-to-end</li>
+                        <li>Sanity</li>
+                        <li>Acceptance</li>
+                        <li>Usability</li>
+                        <li>Compatibility</li>
+                    </ul>
+                    <aside class="notes">
+                        Has anyone gotten in a debate about a test type ?
+
+                        Example: what is 'regression testing' :
+
                         Wikipedia definition: 
                             'Regression testing is a type of software testing that verifies that software previously developed and tested still performs correctly after it was changed or interfaced with other software. Changes may include software enhancements, patches, configuration changes, etc'
+                    </aside>
+
+                    <p>
                     </p>
                 </section>
                 <section>
                     <h2>How google defines test types</h2>
-                    <p>
-                        Google book
-                        Small tests
-                        Medium tests
-                        Large tests
-                        Enormous tests
-                    </p>
+                    <section>
+                        <img src="img/googleBook.jpg">
+                    </section>
+                    <section>
+                        <h3>Small tests</h3>
+                    </section>
+                    <section>
+                        <h3>Medium tests</h3>
+                    </section>
+                    <section>
+                        <h3>Large tests</h3>
+                    </section>
+                    <section>
+                        <h3>Enormous tests</h3>
+                    </section>
                 </section>
                 <section>
                     <h2>Defining your own test types</h2>
-                    <p>
-                        How Alianza defines test types
-                        Small tests
-                        Medium tests
-                        Large tests
-                        Enormous tests
-                    </p>
+                    <section>
+                        <img src="img/main_diagram.png" alt="Small Test Example">
+                    </section>
+                    <section>
+                        <h3>Small tests</h3>
+                        <img src="img/small_test.png" alt="Small Test Example">
+                    </section>
+                    <section>
+                        <h3>Medium tests</h3>
+                        <img src="img/medium_test.png" alt="Small Test Example">
+                    </section>
+                    <section>
+                        <h3>Large tests</h3>
+                        <img src="img/large_test.png" alt="Small Test Example">
+                    </section>
+                    <section>
+                        <h3>Large tests other</h3>
+                        <img src="img/large_test_2.png" alt="Small Test Example">
+                    </section>
+                    <section>
+                        <h3>Large tests other</h3>
+                        <img src="img/large_test_3.png" alt="Small Test Example">
+                    </section>
+                </section>
+                <section>
+                    <h2>Benefits of defining your own test types</h2>
+                    <ul>
+                        <li>Team decides how the pipeline works and when to run tests more generally</li>
+                        <li>Less one off cases of 'this one test should be run differently than the others'</li>
+                        <li>Each type definition is unique to your team/company</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Downsides of defining your own test types</h2>
+                    <ul>
+                        <li>Will take iterations to get right</li>
+                        <li>What happens when a test doesn't fit into your definitions?</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Okay great, why do I care about test types?</h2>
@@ -92,26 +159,23 @@
                     <p>
                 </section>
                 <section>
-                    <h2>Benefits of defining your own test types</h2>
-                    <p>
-                        As a development team, you can decide how your pipeline works
-                        It's specific to your company, there are no pre-conceived notions
-                        Once types are defined, less arguments about what a test is or isn't (ie integration test vs functional test)
-                    </p>
-                </section>
-                <section>
                     <h2>Test types in your CI/CD pipeline</h2>
-                    <p>
-                        Show a couple different examples of when you might run small/medium/large tests
-                        Show an example of when Alianza runs tests in a pipeline
-                    </p>
-                </section>
-                <section>
-                    <h2>CI/CD</h2>
-                    <p>
-                        What is continuous integration?
-                        What is continuous deployment/delivery?
-                    </p>
+                    <section>
+                        <h3>Basic Flow</h3>
+                        <img src="img/basic_flow.png" alt="Basic Flow">
+                    </section>
+                    <section>
+                        <h3>Basic CI</h3>
+                        <img src="img/basic_integration_flow_no_tests.png" alt="Basic CI">
+                    </section>
+                    <section>
+                        <h3>CI with tests</h3>
+                        <img src="img/basic_integration_flow_tests.png" alt="CI">
+                    </section>
+                    <section>
+                        <h3>CD with tests</h3>
+                        <img src="img/basic_delivery_flow_tests.png" alt="CD">
+                    </section>
                 </section>
                 <section>
                     <h2>What does CI/CD look like?</h2>
@@ -174,45 +238,61 @@
                     <h2>Running tests outside of a pipeline</h2>
                     <section>
                         <h3>Small tests</h3>
+                        <ul>
+                            <li>Pre-commit or pre-push git hooks</li>
+                            <li>Simple jenkins job polling repo</li>
+                        </ul>
                     </section>
                     <section>
                         <h3>Medium tests</h3>
+                        <ul>
+                            <li>Pre-commit or pre-push git hooks</li>
+                            <li>Simple jenkins job polling repo</li>
+                            <li>Chain after 'deploy to environment' job (may require centralized medium test repo)</li>
+                        </ul>
                     </section>
                     <section>
-                        <h3>Large tests</h3>
-                    </section>
-                    <section>
-                        <h3>Enormous tests</h3>
+                        <h3>Large/Enormous tests</h3>
+                        <ul>
+                            <li>Chain after 'deploy to environment' job</li>
+                            <li>Scheduled</li>
+                        </ul>
                     </section>
                 </section>
                 <section>
                     <h2>Handling failures</h2>
                     <section>
                         <h3>Notifications</h3>
+                        <ul>
+                            <li>Chat/email notifications on failure</li>
+                            <li>Stack trace or short error message in notification</li>
+                            <li>Jira bug created on failure, assigned to who caused test failure</li>
+                        </ul>
                     </section>
                     <section>
                         <h3>Responsibility for looking at failing tests</h3>
-                    </section>
-                    <section>
-                        <h3>Integrating with other services</h3>
-                        <p>Jira, Db, DataDog/Graphite</p>
+                        <ul>
+                            <li>Randomly assign someone on the team</li>
+                            <li>Rotating goalie</li>
+                            <li>First person into the office looks at failing tests</li>
+                        </ul>
                     </section>
                 </section>
                 <section>
                     <h2>Automated testing in Docker</h2>
                     <section>
                         <h3>Benefits</h3>
-                        <p>
-                            Always clean environment
-                            Always reproducable failures
-                            Portable (nature of docker containers/images)
-                        </p>
+                        <ul>
+                            <li>Always clean environment</li>
+                            <li>Always reproducible failures</li>
+                            <li>Portable (nature of docker containers/images)</li>
+                        </ul>
                     </section>
                     <section>
                         <h3>Downsides</h3>
-                        <p>
-                            Environment may not be the same as prod (unless you are deploying docker containers to prod)
-                        </p>
+                        <ul>
+                            <li>Environment may not be the same as prod (unless you are deploying docker containers to prod)</li>
+                        </ul>
                     </section>
                     <section>
                         <h3>Example</h3>
