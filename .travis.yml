@@ -1,6 +1,5 @@
-language: node_js
-node_js:
-  - 6.3.0
+before_install:
+  - sudo apt-get install node -y
 script:
   - for file in `find -type f -name "*.js"`; do node -c $file; done
   - ./scripts/run_tests small
