@@ -12,7 +12,7 @@ build:
         code:
             ./scripts/run_tests small
 
-deploy_dev:
+deploy-dev:
   steps:
     - script:
         name: Deploy to dev
@@ -24,7 +24,7 @@ deploy_dev:
         code: |
             ./scripts/run_tests medium
 
-deploy_qa:
+deploy-qa:
   steps:
     - script:
         name: Deploy to qa and run large tests
@@ -32,7 +32,7 @@ deploy_qa:
             ./scripts/deploy_code qa
             ./scripts/run_tests large
 
-deploy_qa:
+deploy-production:
   steps:
     - script:
         name: Deploy to prod
