@@ -1,0 +1,3 @@
+echo "Deploying code to $1..."
+sleep 2
+echo "Finished deploying"

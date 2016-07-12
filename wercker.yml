@@ -1,0 +1,46 @@
+box: node:latest
+
+build:
+  steps:
+    - script:
+        name: Check js syntax
+        code: |
+            for file in `find -type f -name "*.js"`; do node -c $file; done
+
+    - script:
+        name: Run small tests
+        code:
+            ./scripts/run_tests small
+
+deploy_dev:
+  steps:
+    - script:
+        name: Deploy to dev
+        code: |
+            ./scripts/deploy_code dev
+
+    - script:
+        name: Run medium tests
+        code: |
+            ./scripts/run_tests medium
+
+deploy_qa:
+  steps:
+    - script:
+        name: Deploy to qa and run large tests
+        code: |
+            ./scripts/deploy_code qa
+            ./scripts/run_tests large
+
+deploy_qa:
+  steps:
+    - script:
+        name: Deploy to prod
+        code: |
+            ./scripts/deploy_code production
+
+    - script:
+        name: Run large and enormous tests
+        code: |
+            ./scripts/run_tests large
+            ./scripts/run_tests enormous

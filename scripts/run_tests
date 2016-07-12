@@ -1,0 +1,3 @@
+echo "Running $1 tests..."
+sleep 2
+echo "Done!"
