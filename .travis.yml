@@ -1,5 +1,16 @@
 language: node_js
 node_js:
-  - 4.1.1
-before_script:
-  - npm install -g grunt-cli
+  - 6.3.0
+script:
+  - for file in `find -type f -name "*.js"`; do node -c $file; done
+  - ./scripts/run_tests small
+  - ./scripts/deploy_code dev
+  - ./scripts/run_tests medium
+  - ./scripts/deploy_code qa
+  - ./scripts/run_tests large
+deploy:
+  - provider: script
+    script: ./scripts/deploy_code production
+    on:
+      branch: master
+
