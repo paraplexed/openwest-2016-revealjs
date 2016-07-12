@@ -1,5 +1,5 @@
 before_install:
-  - sudo apt-get install node -y
+  - sudo apt-get install nodejs -y
 script:
   - for file in `find -type f -name "*.js"`; do node -c $file; done
   - ./scripts/run_tests small
