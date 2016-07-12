@@ -1,4 +1,5 @@
 before_install:
+  - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   - sudo apt-get install nodejs -y
 script:
   - for file in `find -type f -name "*.js"`; do node -c $file; done
