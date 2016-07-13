@@ -1,6 +1,4 @@
 script:
-  - echo 'Syntax check...'
-  - echo 'Syntax ok''
   - ./scripts/run_tests small
   - ./scripts/deploy_code dev
   - ./scripts/run_tests medium
