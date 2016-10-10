@@ -1,12 +1,7 @@
-box: node:latest
+box: golang:1.7.1
 
 build:
   steps:
-    - script:
-        name: Check js syntax
-        code: |
-            for file in `find -type f -name "*.js"`; do node -c $file; done
-
     - script:
         name: Run small tests
         code:
